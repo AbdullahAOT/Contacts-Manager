@@ -30,7 +30,7 @@ namespace ContactsManagerTest
         {
             Contacts.contactsList.Clear();
             string contactName = "Muhammed";
-            string contactName2 = "Abdullah";
+            string contactName2 = "Mustafa";
             Contacts.AddContact(contactName);
             Contacts.AddContact(contactName2);
             Contacts.RemoveContact(contactName);
@@ -42,7 +42,7 @@ namespace ContactsManagerTest
         {
             Contacts.contactsList.Clear();
             string contactName = "Muhammed";
-            string contactName2 = "Abdullah";
+            string contactName2 = "Mustafa";
             List<string> resultList = Contacts.AddContact(contactName);
             resultList = Contacts.AddContact(contactName2);
             resultList = Contacts.ViewContacts();
