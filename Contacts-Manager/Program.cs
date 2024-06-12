@@ -1,10 +1,28 @@
 ﻿namespace Contacts_Manager
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            bool stayInContactsManager = true;
+            try
+            {
+                while (stayInContactsManager)
+                {
+                    Contacts.ContactsManager();
+                    Console.WriteLine("Do you want to do another process on contacts?" +
+                        " if not, enter no, otherwise, enter anything");
+                    string? userAnswer = Console.ReadLine();
+                    if (userAnswer.ToLower() == "no")
+                    {
+                        stayInContactsManager = false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
